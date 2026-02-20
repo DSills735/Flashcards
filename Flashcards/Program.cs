@@ -1,6 +1,6 @@
-﻿using Microsoft.Data.Sql;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-
+using Dapper;
 public class Program
 {
     internal static IConfiguration config = new ConfigurationBuilder()
@@ -9,6 +9,12 @@ public class Program
 
     static string? connectionString = config.GetConnectionString("DefaultConnection");
 
+    static void Main(string[] args)
+    {
+        SqlConnection connection = new SqlConnection(connectionString);
 
+        connection.Open();
+
+    }
 
 }
