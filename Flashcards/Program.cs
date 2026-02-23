@@ -1,20 +1,37 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Dapper;
-public class Program
+using Flashcards.SQL_Helpers;
+using Flashcards.Menus;
+
+
+namespace Program
 {
-    internal static IConfiguration config = new ConfigurationBuilder()
-          .AddJsonFile("appsettings.json")
-          .Build();
-
-    static string? connectionString = config.GetConnectionString("DefaultConnection");
-
-    static void Main(string[] args)
+    public class Program
     {
-        SqlConnection connection = new SqlConnection(connectionString);
+        internal static IConfiguration config = new ConfigurationBuilder()
+              .AddJsonFile("appsettings.json")
+              .Build();
 
-        connection.Open();
+        static string? connectionString = config.GetConnectionString("DefaultConnection");
+
+        static void Main(string[] args)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            var sql1 = SqlHelper.CreateStackTable();
+            var sql2 = SqlHelper.CreateFlashcardTable();
+            var sql3 = SqlHelper.CreateHistoryTable();
+
+
+            connection.Execute(sql1);
+            connection.Execute(sql2);
+            connection.Execute(sql3);
+
+
+            MainMenu.HomeScreen();
+
+        }
 
     }
-
 }
