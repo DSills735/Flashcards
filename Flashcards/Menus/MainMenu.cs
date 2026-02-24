@@ -22,6 +22,7 @@ namespace Flashcards.Menus
             switch (temp)
             {
                 case "1":
+                    CardCreation.CreationMenu();
                     break;
 
                 case "2":
