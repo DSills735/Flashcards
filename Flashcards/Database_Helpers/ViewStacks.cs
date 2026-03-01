@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 using Spectre.Console;
 using Microsoft.Extensions.Configuration;
 using Dapper;
-using System.Runtime.InteropServices;
+
 
 namespace Flashcards.Database_Helpers
 {
