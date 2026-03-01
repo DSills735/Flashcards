@@ -26,8 +26,7 @@ namespace Flashcards.Menus
                     break;
 
                 case "3":
-                        Database_Helpers.ViewStacks viewStacks = new Database_Helpers.ViewStacks();
-                        viewStacks.DisplayStacks();
+                    Database_Helpers.ViewStacks.DisplayStacks();
                     break;
 
                 case "4":

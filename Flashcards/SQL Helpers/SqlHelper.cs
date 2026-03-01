@@ -45,7 +45,7 @@ namespace Flashcards.SQL_Helpers
                                     ";
         }
         internal static string ViewStacks(){
-                        return @"SELECT StackID, Subject FROM Stacks";
+                        return @"SELECT * FROM Stacks";
         }
     }
 }
