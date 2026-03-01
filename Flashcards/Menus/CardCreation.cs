@@ -23,6 +23,7 @@ namespace Flashcards.Menus
                     break;
 
                 case "2":
+                    Stack_Ops.StackCreation.CreateStack();
                     break;
 
                 case "3":

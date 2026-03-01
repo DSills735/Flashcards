@@ -47,5 +47,16 @@ namespace Flashcards.SQL_Helpers
         internal static string ViewStacks(){
                         return @"SELECT * FROM Stacks";
         }
+
+        internal static string SearchStacks()
+        {
+            return "SELECT @Subject Stacks";
+        }
+
+        internal static string AddToStacks()
+        {
+            return @"INSERT INTO Stacks(Subject)
+                        VALUES (@Subject)";
+        }
     }
 }

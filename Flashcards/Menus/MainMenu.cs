@@ -15,7 +15,7 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("3. Delete flashcards -- Not yet functional");
             AnsiConsole.MarkupLine("4. View History -- Not yet functional");
             AnsiConsole.MarkupLine("[maroon]5. Exit Application[/]");
-
+            //stop the app from crashing when an erronous input is sent. 
 
             string temp = Console.ReadLine();
 
