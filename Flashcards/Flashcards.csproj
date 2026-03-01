@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Stack Helpers\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Stack Helpers\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Stack Helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.3" />
@@ -19,11 +28,6 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Stack Helpers\" />
   </ItemGroup>
 
 </Project>

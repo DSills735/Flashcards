@@ -13,7 +13,7 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("[Green]1. Choose from an existing stack.[/]");
             AnsiConsole.MarkupLine("[Yellow]2. Create a new stack.[/]");
             AnsiConsole.MarkupLine("[Blue]3. View existing stacks[/]");
-            AnsiConsole.MarkupLine("[MAroon]4. Return to the main menu.[/]");
+            AnsiConsole.MarkupLine("[Maroon]4. Return to the main menu.[/]");
 
             string temp = Console.ReadLine();
 
@@ -26,6 +26,8 @@ namespace Flashcards.Menus
                     break;
 
                 case "3":
+                        Database_Helpers.ViewStacks viewStacks = new Database_Helpers.ViewStacks();
+                        viewStacks.DisplayStacks();
                     break;
 
                 case "4":
