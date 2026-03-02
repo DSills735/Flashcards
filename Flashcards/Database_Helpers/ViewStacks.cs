@@ -11,7 +11,7 @@ namespace Flashcards.Database_Helpers
     {
         static string? connectionString = Program.Program.config.GetConnectionString("DefaultConnection");
 
-        
+
         public static void DisplayStacks()
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -20,9 +20,9 @@ namespace Flashcards.Database_Helpers
             var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();
 
 
-        var table = new Table()
-                .RoundedBorder()
-                .BorderColor(Color.Blue);
+            var table = new Table()
+                    .RoundedBorder()
+                    .BorderColor(Color.Blue);
             table.AddColumn("[red]Stack ID[/]");
             table.AddColumn("[green]Subject[/]");
 
@@ -36,10 +36,34 @@ namespace Flashcards.Database_Helpers
             Console.WriteLine("Press any key to return to the menu.");
             Console.ReadKey();
 
-            Menus.CardCreation.CreationMenu();
+            Menus.CreationMenu.StackCreationMenu();
         }
 
+        internal static void DisplayStacksForUpdate()
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            Console.Clear();
+            var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();
+
+
+            var table = new Table()
+                    .RoundedBorder()
+                    .BorderColor(Color.Blue);
+            table.AddColumn("[red]Stack ID[/]");
+            table.AddColumn("[green]Subject[/]");
+
+            foreach (var stack in stacks)
+            {
+                table.AddRow($"[red]{stack.StackID}[/]", $"[green]{stack.Subject}[/]");
+            }
+
+            AnsiConsole.Write(table);
+
         }
+
+
     }
+}
 
 
