@@ -12,7 +12,7 @@ namespace Flashcards.Menus
             Console.WriteLine();
             AnsiConsole.MarkupLine("1. Add a new subject, or a new flashcard to an existing stack.");
             AnsiConsole.MarkupLine("2. Study -- Not yet functional");
-            AnsiConsole.MarkupLine("3. Delete flashcards -- Not yet functional");
+            AnsiConsole.MarkupLine("3. Delete specific cards, or an entire subject -- Not yet functional");
             AnsiConsole.MarkupLine("4. View History -- Not yet functional");
             AnsiConsole.MarkupLine("[maroon]5. Exit Application[/]");
               
@@ -26,9 +26,11 @@ namespace Flashcards.Menus
                     break;
 
                 case "2":
+                    
                     break;
 
                 case "3":
+                    DeleteMenu.DeleteMenus();
                     break;
 
                 case "4":

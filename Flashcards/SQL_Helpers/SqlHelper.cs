@@ -55,6 +55,13 @@ namespace Flashcards.SQL_Helpers
                         WHERE Subject = @Subject";              
         }
 
+        internal static string SearchStacksByID()
+        {
+            return @"SELECT COUNT(*) AS TotalCount
+                        FROM Stacks     
+                        WHERE StackID = @StackID";
+        }
+
         internal static string AddToStacks()
         {
             return @"INSERT INTO Stacks(Subject)
@@ -72,6 +79,11 @@ namespace Flashcards.SQL_Helpers
             return @"SELECT COUNT(*) AS TotalCount
                     FROM Stacks
                    WHERE StackID = @StackID";
+        }
+
+        internal static string DeleteStack()
+        {
+            return @"DELETE FROM Stacks WHERE StackID =  @StackID";
         }
     }
 }
