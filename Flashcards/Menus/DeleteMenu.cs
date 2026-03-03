@@ -20,6 +20,7 @@ namespace Flashcards.Menus
             switch (temp)
             {
                 case "1":
+                    Card_Ops.DeleteFlashcard.DeleteSingleFlashcard();
                     break;
 
                 case "2":

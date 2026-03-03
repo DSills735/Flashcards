@@ -47,6 +47,11 @@ namespace Flashcards.SQL_Helpers
         internal static string ViewStacks(){
                         return @"SELECT * FROM Stacks";
         }
+        internal static string ViewFlashcards()
+        {
+            return @"SELECT * FROM Flashcards
+                        ORDER BY StackID";
+        }
 
         internal static string SearchStacks()
         {

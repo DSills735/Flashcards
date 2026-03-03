@@ -43,7 +43,7 @@ namespace Flashcards.Database_Helpers
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            Console.Clear();
+            
             var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();
 
 

@@ -11,7 +11,7 @@ namespace Flashcards.Stack_Ops
         {
             SqlConnection connection = new SqlConnection(connectionString);
 
-            Console.WriteLine("What stack do you want to delete?");
+            Console.WriteLine("What stack do you want to delete? (Enter StackID value)");
             Console.WriteLine();
             Database_Helpers.ViewStacks.DisplayStacksForUpdate();
             Console.WriteLine();

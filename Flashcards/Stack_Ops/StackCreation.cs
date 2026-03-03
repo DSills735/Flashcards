@@ -54,7 +54,7 @@ namespace Flashcards.Stack_Ops
             AnsiConsole.Status()
                 .Start("Returning to Creator menu...", ctx =>
                 {
-                    connection.Execute(SQL_Helpers.SqlHelper.AddToStacks(), new { Subject = name });
+                   
                     ctx.Spinner(Spinner.Known.Aesthetic);
                     Thread.Sleep(1000);
                     
