@@ -9,6 +9,7 @@ namespace Flashcards.Stack_Ops
     {
         //TODO make sure the connection string is being pulled correctly. IF so, refactor to use the same method for the rest of the program.
         //static string? connectionString = Program.Program.config.GetConnectionString("DefaultConnection");
+        // use the above line for refacotring... will delete. 
         static string? connectionString = Database_Helpers.ConnectionString.ConnString();
         public static void CreateStack()
         {
