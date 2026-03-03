@@ -50,13 +50,21 @@ namespace Flashcards.SQL_Helpers
 
         internal static string SearchStacks()
         {
-            return "SELECT @Subject Stacks";
+            return @"SELECT COUNT(*) AS TotalCount
+                        FROM Stacks     
+                        WHERE Subject = @Subject";              
         }
 
         internal static string AddToStacks()
         {
             return @"INSERT INTO Stacks(Subject)
                         VALUES (@Subject)";
+        }
+
+        internal static string AddToFlashcards()
+        {
+            return @"INSERT INTO Flashcards(Question, Answer, StackID)
+                           VALUES(@Question, @Answer, @StackID)";
         }
 
         internal static string SearchForSubjectID()

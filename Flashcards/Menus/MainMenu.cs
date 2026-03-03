@@ -10,7 +10,7 @@ namespace Flashcards.Menus
             Console.Clear();
             AnsiConsole.MarkupLine("[slowblink][Blue]Welcome to the Flashcards app![/][/]");
             Console.WriteLine();
-            AnsiConsole.MarkupLine("1. Add a new subject, or a new flashcard to an existing stack. -- Not yet functional");
+            AnsiConsole.MarkupLine("1. Add a new subject, or a new flashcard to an existing stack.");
             AnsiConsole.MarkupLine("2. Study -- Not yet functional");
             AnsiConsole.MarkupLine("3. Delete flashcards -- Not yet functional");
             AnsiConsole.MarkupLine("4. View History -- Not yet functional");

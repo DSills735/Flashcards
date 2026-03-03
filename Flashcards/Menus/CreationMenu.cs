@@ -3,20 +3,20 @@ using System.Threading;
 
 namespace Flashcards.Menus
 {
-    //Rename this class to something more appropriate.
+     
     public class CreationMenu
     {
         public static void StackCreationMenu()
         {
             Console.Clear();
 
-            AnsiConsole.MarkupLine("[slowblink][purple]Welcome to the Subject creator.[/][/]");
+            AnsiConsole.MarkupLine("[slowblink][purple]Welcome to the Creator menu.[/][/]");
             Console.WriteLine();
             AnsiConsole.MarkupLine("[Green]1. Add a new flashcard to an existing subject.[/]");
             AnsiConsole.MarkupLine("[Yellow]2. Create a new subject.[/]");
             AnsiConsole.MarkupLine("[Blue]3. View existing subjects[/]");
             AnsiConsole.MarkupLine("[Maroon]4. Return to the main menu.[/]");
-            // TODO Double check the spinner funcion. 
+            
 
             string temp = Console.ReadLine();
 
@@ -43,7 +43,7 @@ namespace Flashcards.Menus
                                                 Please choose an option [bold][underline]listed above[/][/]. Thank you");
 
                     AnsiConsole.Status()
-                        .Start("Returning to the stacks menu...", ctx =>
+                        .Start("Regenerating stacks menu... Please wait before entering your choice.", ctx =>
                         {
                             ctx.Spinner(Spinner.Known.Aesthetic);
                             Thread.Sleep(3000);
