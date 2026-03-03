@@ -23,6 +23,7 @@ namespace Flashcards.Menus
             switch (temp)
             {
                 case "1":
+                    Card_Ops.FlashcardCreation.CardCreator();
                     break;
 
                 case "2":

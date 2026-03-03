@@ -58,5 +58,12 @@ namespace Flashcards.SQL_Helpers
             return @"INSERT INTO Stacks(Subject)
                         VALUES (@Subject)";
         }
+
+        internal static string SearchForSubjectID()
+        {
+            return @"SELECT COUNT(*) AS TotalCount
+                    FROM Stacks
+                   WHERE StackID = @StackID";
+        }
     }
 }

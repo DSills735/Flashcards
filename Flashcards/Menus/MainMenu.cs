@@ -15,7 +15,7 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("3. Delete flashcards -- Not yet functional");
             AnsiConsole.MarkupLine("4. View History -- Not yet functional");
             AnsiConsole.MarkupLine("[maroon]5. Exit Application[/]");
-            //TODO stop the app from crashing when an erronous input is sent. -- FIXED? Double check this.  
+              
 
             string temp = Console.ReadLine();
 
@@ -39,8 +39,8 @@ namespace Flashcards.Menus
                     break;
 
                 default:
-                    
-                    AnsiConsole.MarkupLine("[rapidblink][maroon]Invalid Response![/][/] Please choose an option [bold][underline]listed above[/][/]. Thank you");
+                    Console.Clear();
+                    AnsiConsole.MarkupLine("[rapidblink][maroon]Invalid Response![/][/] Please choose a [bold][underline]valid option from the list[/][/]. Thank you");
                     AnsiConsole.Status()
                          .Start("Regenerating options...", ctx =>
                          {
