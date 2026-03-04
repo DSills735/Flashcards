@@ -16,9 +16,9 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("[Yellow]2. Create a new subject.[/]");
             AnsiConsole.MarkupLine("[Blue]3. View existing subjects[/]");
             AnsiConsole.MarkupLine("[Maroon]4. Return to the main menu.[/]");
-            
 
-            string temp = Console.ReadLine();
+
+            string temp = Console.ReadLine().Trim() ;
 
             switch (temp)
             {

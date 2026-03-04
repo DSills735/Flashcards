@@ -15,9 +15,9 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("3. Delete specific cards, or an entire subject");
             AnsiConsole.MarkupLine("4. View History -- Not yet functional");
             AnsiConsole.MarkupLine("[maroon]5. Exit Application[/]");
-              
 
-            string temp = Console.ReadLine();
+
+            string temp = Console.ReadLine().Trim() ;
 
             switch (temp)
             {
@@ -26,7 +26,7 @@ namespace Flashcards.Menus
                     break;
 
                 case "2":
-                    
+                    StudyMenu.StudyHome();
                     break;
 
                 case "3":

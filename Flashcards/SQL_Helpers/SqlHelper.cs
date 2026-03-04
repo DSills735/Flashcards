@@ -8,7 +8,8 @@
                     BEGIN
                          CREATE TABLE Stacks (
                             StackID INT PRIMARY KEY IDENTITY(1,1),
-                            Subject VARCHAR(255)
+                            Subject VARCHAR(255),
+                            HighScore INT
                              );
                     END";
 

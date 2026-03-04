@@ -13,9 +13,10 @@ namespace Flashcards.Menus
             Console.WriteLine();
             AnsiConsole.MarkupLine("[green]1. Individual Flashcard[/]");
             AnsiConsole.MarkupLine("[red]2. An entire subject[/]");
-            AnsiConsole.MarkupLine("3. Return to the main menu.");
+            AnsiConsole.MarkupLine("3. Go to the study section.");
+            AnsiConsole.MarkupLine("4. Return to the main menu.");
 
-            string temp = Console.ReadLine();
+            string temp = Console.ReadLine().Trim();
 
             switch (temp)
             {
@@ -28,6 +29,10 @@ namespace Flashcards.Menus
                     break;
 
                 case "3":
+                    StudyMenu.StudyHome();
+                    break;
+
+                case "4":
                     MainMenu.HomeScreen();
                     break;
 
