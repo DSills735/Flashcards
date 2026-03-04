@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Flashcards.Objects
+namespace Flashcards.DTO
 {
-    internal class StackObject
+    internal class StackDTO
     {
         public int StackID { get; set; }
         public required string Subject { get; set; }
