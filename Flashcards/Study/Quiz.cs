@@ -35,6 +35,8 @@ namespace Flashcards.Study
                 {
                     exists = true;
                 }
+
+
             }
         }
     }
