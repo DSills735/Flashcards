@@ -21,6 +21,7 @@ namespace Flashcards.Study
             bool exists = false;
 
             //TODO refactor the below into its own class? I think it would reduce boilerplate code 
+            //several useages in other files like in Stack_OPS namespace.
 
             while (!exists)
             {
@@ -41,7 +42,7 @@ namespace Flashcards.Study
 
                 int qNum = 1;
                 int score = 0;
-                //TODO Logic finally figured out.., Need to finish this section
+                //TODO Logic finally figured out.., Need to finish this section. 
               
                 foreach (var stack in subject)
                 {

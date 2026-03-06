@@ -2,6 +2,7 @@
 {
     internal class SqlHelper
     {
+        //TODO Refactor this to make sense/better optimized.
         internal static string CreateStackTable()
         {
             return @"IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Stacks')
