@@ -18,6 +18,15 @@ It worked well on that project with a limited number of queries, but on this pro
 
 The more I work on this project, the more I realize the importance of sticking with a single naming convention. Nearning the end of the project, I was struggling with some of the names I created. I will definitely put more time and thought into on the next project I do. 
 
+During this project I started taking notes on issues I encountered, and the solutions I found. Not sure if this will help me in the future or not, but seems like a best practice as of now. It has helped me a few times already in the short term, so I think this will be really valuable. 
+
+## Reflections
+
+I think for me, the most obvious thing is identifying a naming convention and sticking to it. Also naming my functions better would be excelent and create less confusion for me near the end of the project. When I was finishing up the study and history section I spent more time clicking around trying to find the right file. That cant happen, and wont happen again hopefully. 
+
+Also this is a tough one, since the project was required to be a console app, but in my opinion, this project needed to have a GUI. Navigating an app this complex feels like a chore (or maybe its just bad UI design). I felt I cleaned it up the best I could, but im sure it could improve. 
+
+
 ## Project Requirements
 
 
