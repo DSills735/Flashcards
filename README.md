@@ -16,6 +16,8 @@ I learned a ton throughout this process. This was my first real introduction to 
 I also expanced on my SQL usage from my previous project (Coding Tracker, found here: https://github.com/DSills735/CodingTracker). In that project I did a similar thing with my SQL storing them all in one class. 
 It worked well on that project with a limited number of queries, but on this project it started to get really confusing. I would like to organize this better in the future, maybe create a class per type of query, or create a SQL class within each namespace. I really thoroughly enjoyed the challenges intorduced to me on this project!
 
+The more I work on this project, the more I realize the importance of sticking with a single naming convention. Nearning the end of the project, I was struggling with some of the names I created. I will definitely put more time and thought into on the next project I do. 
+
 ## Project Requirements
 
 
