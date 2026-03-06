@@ -101,7 +101,7 @@
         }
         internal static string ReturnEntireStackWithStackID()
         {
-            return @"Select * FROM Flashcards WHERE StackID = @StackID";
+            return @"Select * FROM Flashcards WHERE StackID = @StackID ORDER BY NEWID()";
         }
     }
 }

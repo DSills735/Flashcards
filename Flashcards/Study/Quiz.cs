@@ -41,8 +41,8 @@ namespace Flashcards.Study
 
                 int qNum = 1;
                 int score = 0;
-                //TODO Logic finally figured out.., Need to finish this section and find a way to possibly randomize the cards?
-                //maybe needs to be done in SQL
+                //TODO Logic finally figured out.., Need to finish this section
+              
                 foreach (var stack in subject)
                 {
                     var dto = stack.ToDto();
