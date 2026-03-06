@@ -10,7 +10,7 @@ I used C# along with Dapper and Spectre to design the application. SQL, Dapper O
 I would like to enhance the user experience and allow a more seamless use of the interface, being able to add/delete/change cards from the study session would be great. I also would like to streamline the areas where cards are created, as the process seems very convoluted to me as it sits now. I would also like to streamline the SQL management, as the single class for that quickly got out of hand. 
 
 
-## Lessons Learned:
+## Lessons Learned
 
 I learned a ton throughout this process. This was my first real introduction to object mapping, and DTOs. Those felt overly complicated when I started, but quickly became something that felt easy, and very intuitive. 
 I also expanced on my SQL usage from my previous project (Coding Tracker, found here: https://github.com/DSills735/CodingTracker). In that project I did a similar thing with my SQL storing them all in one class. 
