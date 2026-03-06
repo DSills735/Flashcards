@@ -1,12 +1,6 @@
-﻿namespace Flashcards.DTO
+﻿using Flashcards.Mapping;
+
+namespace Flashcards.DTO
 {
-    public class FlashcardDTO
-    {
-
-        public required string Question { get; set; }
-        public required string Answer { get; set; }
-
-
-
-    }
+    public record FlashcardDTO(string Question, string Answer);
 }

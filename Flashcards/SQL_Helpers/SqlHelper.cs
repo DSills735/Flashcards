@@ -99,5 +99,9 @@
         {
             return @"DELETE FROM Flashcards WHERE FlashcardID = @FlashcardID";
         }
+        internal static string ReturnEntireStackWithStackID()
+        {
+            return @"Select * FROM Flashcards WHERE StackID = @StackID";
+        }
     }
 }

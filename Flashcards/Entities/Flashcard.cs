@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Flashcards.Entities
 {
-    internal class Flaschard
+    public class Flashcard
     {
         public int Id { get; set; }
         public required string Question { get; set; }

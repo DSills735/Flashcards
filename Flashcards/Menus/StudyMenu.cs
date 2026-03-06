@@ -24,7 +24,7 @@ namespace Flashcards.Menus
             switch (temp)
             {
                 case "1":
-
+                    Study.Quiz.SingleSubjectQuiz();
                     break;
 
                 case "2":

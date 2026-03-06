@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using Spectre.Console;
 using Dapper;
+using Flashcards.Mapping;
 
 namespace Flashcards.Study
 {
@@ -19,7 +20,7 @@ namespace Flashcards.Study
 
             bool exists = false;
 
-            //TODO refactor the below into its own class?
+            //TODO refactor the below into its own class? I think it would reduce boilerplate code 
 
             while (!exists)
             {
@@ -36,6 +37,25 @@ namespace Flashcards.Study
                     exists = true;
                 }
 
+                var subject = connection.Query<Flashcards.Entities.Flashcard>(SQL_Helpers.SqlHelper.ReturnEntireStackWithStackID(), new {StackID = resp});
+
+                int qNum = 1;
+                int score = 0;
+                //TODO Logic finally figured out.., Need to finish this section and find a way to possibly randomize the cards?
+                //maybe needs to be done in SQL
+                foreach (var stack in subject)
+                {
+                    var dto = stack.ToDto();
+
+                    Console.WriteLine($"Question {qNum}: {dto.Question}");
+                    Console.WriteLine();
+                    Console.WriteLine("When you are ready to see the answer, press any key.");
+                    Console.ReadKey();
+                    Console.WriteLine(dto.Answer);
+
+
+
+                }
 
             }
         }
