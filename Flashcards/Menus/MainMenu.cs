@@ -11,9 +11,9 @@ namespace Flashcards.Menus
             AnsiConsole.MarkupLine("[slowblink][Blue]Welcome to the Flashcards app![/][/]");
             Console.WriteLine();
             AnsiConsole.MarkupLine("1. Add a new subject, or a new flashcard to an existing stack.");
-            AnsiConsole.MarkupLine("2. Study -- Not yet functional");
+            AnsiConsole.MarkupLine("2. Study");
             AnsiConsole.MarkupLine("3. Delete specific cards, or an entire subject");
-            AnsiConsole.MarkupLine("4. View History -- Not yet functional");
+            AnsiConsole.MarkupLine("4. View History");
             AnsiConsole.MarkupLine("[maroon]5. Exit Application[/]");
 
 
@@ -34,6 +34,7 @@ namespace Flashcards.Menus
                     break;
 
                 case "4":
+                    Study.ViewHistory.PrintHistoryTable();
                     break;
 
                 case "5":

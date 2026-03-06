@@ -8,6 +8,10 @@ namespace Flashcards.SQL_Helpers
             return @"INSERT INTO History(Date, Score)
                            VALUES(@Date, @Score)";
         }
+        internal static string ViewHistory()
+        {
+            return "SELECT * FROM History";
+        }
 
     }
 }
