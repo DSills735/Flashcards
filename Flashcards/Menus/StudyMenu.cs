@@ -10,16 +10,15 @@ namespace Flashcards.Menus
 
         internal static void StudyHome()
         {
+            Console.Clear();
             Console.WriteLine("Welcome to the study area. Please choose an option from below.");
-
             Console.WriteLine();
-
             Console.WriteLine("1. Quiz yourself on a subject");
             Console.WriteLine("2. Modify an existing stack or flashcard.");
             Console.WriteLine("3. View the all of the cards in a subject");
             Console.WriteLine("4. Return to main menu. ");
 
-            string temp = Console.ReadLine().Trim();
+            string temp = Console.ReadLine()!.Trim();
 
             switch (temp)
             {
@@ -32,11 +31,11 @@ namespace Flashcards.Menus
                     break;
 
                 case "3":
-
+                    Study.ViewCardsHelper.GetStackID();
                     break;
 
                 case "4":
-                    Environment.Exit(0);
+                    MainMenu.HomeScreen();
                     break;
 
                 default:

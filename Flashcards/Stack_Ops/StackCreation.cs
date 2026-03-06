@@ -18,7 +18,7 @@ namespace Flashcards.Stack_Ops
             AnsiConsole.WriteLine();
             AnsiConsole.WriteLine("Please enter a unique name for the subject you wish to create.");
 
-            string name = Console.ReadLine();
+            string name = Console.ReadLine()!;
 
             bool exists = false;
 
@@ -31,7 +31,7 @@ namespace Flashcards.Stack_Ops
                 {
                     
                     AnsiConsole.MarkupLine(@"[rapidblink][maroon]ERROR!![/][/][red] You cannot create a new subject with an existing name.[/] Please enter another name.");
-                    name = Console.ReadLine();
+                    name = Console.ReadLine()!;
                 }
                 else
                 {

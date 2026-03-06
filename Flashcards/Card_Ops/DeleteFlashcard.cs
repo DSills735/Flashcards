@@ -18,7 +18,7 @@ namespace Flashcards.Card_Ops
             Database_Helpers.ViewFlashcards.FlashcardsToTable();
             bool exists = false;
 
-            string resp = Console.ReadLine();
+            string resp = Console.ReadLine()!;
 
             while (!exists)
             {
@@ -28,7 +28,7 @@ namespace Flashcards.Card_Ops
                 {
 
                     AnsiConsole.MarkupLine(@"[rapidblink][maroon]ERROR!![/][/][red] This stack was not found.[/] Please ensure the ID you are entering is reflected on the table above.");
-                    resp = Console.ReadLine();
+                    resp = Console.ReadLine()!;
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace Flashcards.Card_Ops
 
             AnsiConsole.MarkupLine("[rapidblink][maroon] Are you sure you want to delete this flashcard?[/][/] Y / N");
 
-            string tmp = Console.ReadLine().Trim().ToLower();
+            string tmp = Console.ReadLine()!.Trim().ToLower();
 
             if (tmp == "y")
             {
