@@ -7,7 +7,7 @@ I used C# along with Dapper and Spectre to design the application. SQL, Dapper O
 
 ## Optimizations
 
-I would like to enhance the user experience and allow a more seamless use of the interface, being able to add/delete/change cards from the study session would be great. I also would like to streamline the areas where cards are created, as the process seems very convoluted to me as it sits now.
+I would like to enhance the user experience and allow a more seamless use of the interface, being able to add/delete/change cards from the study session would be great. I also would like to streamline the areas where cards are created, as the process seems very convoluted to me as it sits now. I would also like to streamline the SQL management, as the single class for that quickly got out of hand. 
 
 
 ## Lessons Learned:
