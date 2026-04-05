@@ -17,10 +17,10 @@ namespace Flashcards.Card_Ops
 
             Database_Helpers.ViewFlashcards.FlashcardsToTable();
             bool exists = false;
-
+            
             string resp = Console.ReadLine()!;
 
-            while (!exists)
+            while (!exists || resp == null)
             {
                 int count = connection.ExecuteScalar<int>(SQL_Helpers.SqlHelper.SearchFlashcardsByID(), new { FlashcardID = resp });
 

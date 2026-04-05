@@ -3,7 +3,6 @@
 namespace Flashcards.Stack_Ops
 {
 
-    //TODO Need to finish the create a card portion before I finish this. 
     internal class UpdateStack
     {
         public static void UpdateStacks()
