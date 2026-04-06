@@ -14,7 +14,7 @@ namespace Flashcards.Database_Helpers
 
         public static void DisplayStacks()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             Console.Clear();
             var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();
@@ -41,7 +41,7 @@ namespace Flashcards.Database_Helpers
 
         internal static void DisplayStacksForUpdate()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             
             var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();

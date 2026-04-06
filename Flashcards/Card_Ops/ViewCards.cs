@@ -11,7 +11,7 @@ namespace Flashcards.Card_Ops
         static string? connectionString = Database_Helpers.ConnectionString.ConnString();
         internal static void SingleSubjectCardsToTable(string id)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
 
             var stacks = connection.Query(SqlHelper.ReturnEntireStackWithStackID(), new {StackID = id}).ToList();

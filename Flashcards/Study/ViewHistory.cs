@@ -12,7 +12,7 @@ namespace Flashcards.Study
         internal static void PrintHistoryTable()
         {
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
             var history = connection.Query(SQL_History.ViewHistory()).ToList();
 
             var table = new Table()

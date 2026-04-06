@@ -5,7 +5,7 @@ namespace Flashcards.Validation
 {
     internal class DbValidation
     {
-        //TODO ref FlashcardCreaton CardCreator
+        
         public static bool ValidateSearchByStackID(int queryResp)
         {
             if (queryResp == 0)

@@ -9,7 +9,7 @@ namespace Flashcards.Stack_Ops
         static string? connectionString = Database_Helpers.ConnectionString.ConnString();
         internal static void DeleteStack()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             Console.WriteLine("What stack do you want to delete? (Enter StackID value)");
             Console.WriteLine();

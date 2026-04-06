@@ -12,7 +12,7 @@ namespace Flashcards.Card_Ops
 
         internal static void CardCreator()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
             bool reply = false;
             Console.WriteLine("Hello. Please choose the ID of a subject you would like to add this card to.");
 
@@ -20,7 +20,6 @@ namespace Flashcards.Card_Ops
 
             Console.WriteLine();
 
-            //TODO refactor the below code to streamline
 
             string subj = Console.ReadLine();
             int stackID = Convert.ToInt32(subj);
@@ -30,7 +29,7 @@ namespace Flashcards.Card_Ops
             AnsiConsole.Status()
                 .Start("Searching for subject...", ctx =>
                  {
-                     //TODO validation -- Keeping this here JIC but It should be fixed now. 
+
                      reply = Validation.DbValidation.ValidateSearchByStackID(subject);
                      ctx.Spinner(Spinner.Known.Aesthetic);
                      Thread.Sleep(3000);

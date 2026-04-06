@@ -11,7 +11,7 @@ namespace Flashcards.Study
         internal static void SingleSubjectQuiz()
         {
             Console.Clear();
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             Console.WriteLine("What subject would you like quizzed on?");
 
@@ -21,8 +21,7 @@ namespace Flashcards.Study
 
             bool exists = false;
 
-            //TODO refactor the below into its own class? I think it would reduce boilerplate code 
-            //several useages in other files like in Stack_OPS namespace.
+            
 
             while (!exists)
             {

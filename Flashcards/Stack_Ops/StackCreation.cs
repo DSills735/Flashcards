@@ -10,7 +10,7 @@ namespace Flashcards.Stack_Ops
         static string? connectionString = Database_Helpers.ConnectionString.ConnString();
         public static void CreateStack()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             Console.Clear();
             

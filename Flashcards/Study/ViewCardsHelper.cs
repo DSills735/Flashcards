@@ -10,7 +10,7 @@ namespace Flashcards.Study
         static string? connectionString = Database_Helpers.ConnectionString.ConnString();
         internal static void GetStackID()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             var stacks = connection.Query(SqlHelper.ViewStacks()).ToList();
 

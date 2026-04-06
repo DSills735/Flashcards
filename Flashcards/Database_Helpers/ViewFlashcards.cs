@@ -14,7 +14,7 @@ namespace Flashcards.Database_Helpers
 
         internal static void FlashcardsToTable()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
             var cards = connection.Query(SQL_Helpers.SqlHelper.ViewFlashcards());
 
             var table = new Table()

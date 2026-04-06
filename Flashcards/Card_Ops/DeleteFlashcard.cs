@@ -10,7 +10,7 @@ namespace Flashcards.Card_Ops
 
         internal static void DeleteSingleFlashcard()
         {
-            SqlConnection connection = new SqlConnection(connectionString);
+            using SqlConnection connection = new SqlConnection(connectionString);
 
             Console.WriteLine("What flashcard would you like to delete? (Enter the ID)");
             Console.WriteLine();
